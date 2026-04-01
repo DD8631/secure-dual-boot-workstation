@@ -1,38 +1,119 @@
-# secure-dual-boot-workstation
-
-A documented build of a Lenovo ThinkPad configured with Windows 11 and Ubuntu in a dual-boot setup, including disk partitioning, BitLocker considerations, recovery planning, and baseline security hardening.
+# Secure Dual-Boot Workstation
 
 ## Overview
-Built a secure dual-boot workstation with Windows 11 and Unbuntu 24.04.4.
 
-# Objectives
-- Install Windows 11
-- Configure dual boot with Ubuntu
-- Preserve unallocated space
-- Enable and manage BitLocker
-- Validate security baseline
+This project documents the design and implementation of a secure dual-boot workstation using Windows 11 and Ubuntu. The system was built with a focus on security, stability, and flexibility to support cybersecurity learning, Linux development, and future lab expansion.
 
-## Hardware
-Lenovo ThinkPad E15 Gen 2
-- Intel i7, 32GB RAM, 1TB SSD
+---
 
-## Key Skills
-- OS installation
-- Disk partitioning
-- BitLocker management
-- Troubleshooting
+## Key Features
 
-## Build Summary
-Clean install -> partitioning -> security setup -> Ubuntu install -> GRUB -> BitLocker re-enabled
+* Clean Windows 11 installation with secure baseline configuration
+* Full disk encryption using BitLocker
+* Dual-boot setup with Ubuntu
+* GRUB bootloader for OS selection
+* Manual disk partitioning strategy
+* Documented troubleshooting and recovery process
 
-## Challenges encountered
-- BitLocker blocking Ubuntu install
-- Suspension not persisting
-- Boot issue recovery
+---
+
+## System Architecture
+
+* **Windows 11**
+
+  * Primary OS
+  * Encrypted with BitLocker
+  * Used for secure daily operations
+
+* **Ubuntu**
+
+  * Secondary OS
+  * Used for development and security tooling
+
+* **GRUB Bootloader**
+
+  * Handles OS selection at startup
+
+---
+
+## Documentation
+
+### Project Foundation
+
+* [Project Overview](docs/01-project-overview.md)
+* [Hardware and Tools](docs/02-hardware-and-tools.md)
+
+### System Build
+
+* [Windows 11 Installation](docs/03-windows-11-install.md)
+* [Security Hardening](docs/04-security-hardening.md)
+* [Disk Partitioning Strategy](docs/05-disk-partitioning.md)
+
+### Dual-Boot Setup
+
+* [Ubuntu Installation](docs/06-ubuntu-install.md)
+* [BitLocker and Recovery](docs/07-bitlocker-and-recovery.md)
+
+### Troubleshooting and Reflection
+
+* [Challenges and Troubleshooting](docs/08-challenges.md)
+* [Future Improvements](docs/09-future-improvements.md)
+
+---
+
+## Key Skills Demonstrated
+
+* Operating system installation and configuration
+* Disk partition planning and management
+* Dual-boot system setup and bootloader configuration
+* BitLocker encryption management
+* System hardening and security baseline implementation
+* Troubleshooting boot and installation issues
+* Technical documentation and project structuring
+
+---
+
+## Challenges Encountered
+
+Key issues addressed during this project include:
+
+* BitLocker blocking Linux installation
+* Encryption suspension not persisting across reboot
+* System boot failure (black screen) and recovery
+* Recovery key management and identification
+
+See full details:
+[Challenges and Troubleshooting](docs/08-challenges.md)
+
+---
 
 ## Outcome
-Fully working dual-boot system with encryption and documentation.
 
-## Future Improvements
-- Add lab environment
-- add diagrams/screenshots
+The final system provides:
+
+* Secure Windows environment with full disk encryption
+* Fully functional Ubuntu installation
+* Reliable dual-boot configuration
+* Verified recovery and troubleshooting procedures
+* A documented and repeatable build process
+
+---
+
+## Future Work
+
+Planned areas for expansion include:
+
+* Building an isolated cybersecurity lab environment
+* Adding additional operating systems and tools
+* Creating reusable system images
+* Expanding system monitoring and hardening
+
+See full details:
+[Future Improvements](docs/09-future-improvements.md)
+
+---
+
+## Author Notes
+
+This project was built as part of a transition into cybersecurity and systems-focused development. It reflects a hands-on approach to learning through building, troubleshooting, and documenting real-world configurations.
+
